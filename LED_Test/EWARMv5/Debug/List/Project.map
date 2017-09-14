@@ -1,0 +1,314 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.2.13589/W32 for ARM                14/Sep/2017  15:05:27
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Exe\Project.out
+#    Map file     =  
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\List\Project.map
+#    Command line =  
+#        -f C:\Users\DELL\AppData\Local\Temp\EWA541.tmp
+#        (C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\cortexm3_macro.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\main.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_adc.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_dma.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_exti.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_flash.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_gpio.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_i2c.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_it.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_lib.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_nvic.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_pwr.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_rcc.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_rtc.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_sdio.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_spi.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_systick.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_tim.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_usart.o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj\stm32f10x_vector.o
+#        -o
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Exe\Project.out
+#        --map
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\List\Project.map
+#        --config
+#        C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\stm32f10x_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0803ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x2000ffff] {
+          rw, block CSTACK, block HEAP };
+
+  Section   Kind        Address    Size  Object
+  -------   ----        -------    ----  ------
+"A0":                             0x130
+  .intvec   const    0x08000000   0x130  stm32f10x_vector.o [1]
+                   - 0x08000130   0x130
+
+"P1":                             0x64c
+  .text     ro code  0x08000130   0x2da  main.o [1]
+  .text     ro code  0x0800040c    0xba  stm32f10x_gpio.o [1]
+  .text     ro code  0x080004c8   0x134  stm32f10x_rcc.o [1]
+  .text     ro code  0x080005fc    0x28  stm32f10x_flash.o [1]
+  .text     ro code  0x08000624    0x8a  stm32f10x_it.o [1]
+  .text     ro code  0x080006b0    0x7a  cortexm3_macro.o [1]
+  .text     ro code  0x0800072c    0x1a  cmain.o [4]
+  .text     ro code  0x08000746     0x4  low_level_init.o [3]
+  .text     ro code  0x0800074a     0x4  exit.o [3]
+  .text     ro code  0x08000750     0xa  cexit.o [4]
+  .text     ro code  0x0800075c    0x14  exit.o [5]
+  .text     ro code  0x08000770     0xc  cstartup_M.o [4]
+                   - 0x0800077c   0x64c
+
+"P2":                            0x2000
+  CSTACK             0x20000000  0x2000  <Block>
+    CSTACK  uninit   0x20000000  0x2000  <Block tail>
+                   - 0x20002000  0x2000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj: [1]
+    cortexm3_macro.o        122
+    main.o                  730
+    stm32f10x_flash.o        40
+    stm32f10x_gpio.o        186
+    stm32f10x_it.o          138
+    stm32f10x_rcc.o         308
+    stm32f10x_vector.o               304
+    ---------------------------------------------
+    Total:                1 524      304
+
+command line: [2]
+    ---------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                    4
+    low_level_init.o          4
+    ---------------------------------------------
+    Total:                    8
+
+rt7M_tl.a: [4]
+    cexit.o                  10
+    cmain.o                  26
+    cstartup_M.o             12
+    ---------------------------------------------
+    Total:                   48
+
+shb_l.a: [5]
+    exit.o                   20
+    ---------------------------------------------
+    Total:                   20
+
+    Gaps                     12
+    Linker created                          8 192
+-------------------------------------------------
+    Grand Total:          1 612      304    8 192
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+?main                   0x0800072d         Code  Gb  cmain.o [4]
+ADC1_2_IRQHandler       0x0800066d    0x2  Code  Gb  stm32f10x_it.o [1]
+ADC3_IRQHandler         0x08000697    0x2  Code  Gb  stm32f10x_it.o [1]
+BlinkLed                0x08000233   0x20  Code  Gb  main.o [1]
+BusFaultException       0x08000641    0x2  Code  Gb  stm32f10x_it.o [1]
+CAN_RX1_IRQHandler      0x08000673    0x2  Code  Gb  stm32f10x_it.o [1]
+CAN_SCE_IRQHandler      0x08000675    0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base            0x20000000          --   Gb  - Linker created -
+CSTACK$$Limit           0x20002000          --   Gb  - Linker created -
+DMA1_Channel1_IRQHandler
+                        0x08000635    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA1_Channel2_IRQHandler
+                        0x08000661    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA1_Channel3_IRQHandler
+                        0x08000663    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA1_Channel4_IRQHandler
+                        0x08000665    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA1_Channel5_IRQHandler
+                        0x08000667    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA1_Channel6_IRQHandler
+                        0x08000669    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA1_Channel7_IRQHandler
+                        0x0800066b    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA2_Channel1_IRQHandler
+                        0x080006a7    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA2_Channel2_IRQHandler
+                        0x080006a9    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA2_Channel3_IRQHandler
+                        0x080006ab    0x2  Code  Gb  stm32f10x_it.o [1]
+DMA2_Channel4_5_IRQHandler
+                        0x080006ad    0x2  Code  Gb  stm32f10x_it.o [1]
+DebugMonitor            0x08000645    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI0_IRQHandler        0x08000657    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI15_10_IRQHandler    0x08000639    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI1_IRQHandler        0x08000659    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI2_IRQHandler        0x0800065b    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI3_IRQHandler        0x0800065d    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI4_IRQHandler        0x0800065f    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI9_5_IRQHandler      0x08000677    0x2  Code  Gb  stm32f10x_it.o [1]
+FLASH_IRQHandler        0x08000653    0x2  Code  Gb  stm32f10x_it.o [1]
+FLASH_PrefetchBufferCmd
+                        0x08000613    0xc  Code  Gb  stm32f10x_flash.o [1]
+FLASH_SetLatency        0x080005fd    0xc  Code  Gb  stm32f10x_flash.o [1]
+FSMC_IRQHandler         0x08000699    0x2  Code  Gb  stm32f10x_it.o [1]
+GPIO_Configuration      0x08000159   0x4c  Code  Gb  main.o [1]
+GPIO_Init               0x0800040d   0xa4  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_ReadInputDataBit   0x080004b1    0xe  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_ResetBits          0x080004c3    0x4  Code  Gb  stm32f10x_gpio.o [1]
+GPIO_SetBits            0x080004bf    0x4  Code  Gb  stm32f10x_gpio.o [1]
+HardFaultException      0x0800063d    0x2  Code  Gb  stm32f10x_it.o [1]
+I2C1_ER_IRQHandler      0x08000685    0x2  Code  Gb  stm32f10x_it.o [1]
+I2C1_EV_IRQHandler      0x08000683    0x2  Code  Gb  stm32f10x_it.o [1]
+I2C2_ER_IRQHandler      0x08000689    0x2  Code  Gb  stm32f10x_it.o [1]
+I2C2_EV_IRQHandler      0x08000687    0x2  Code  Gb  stm32f10x_it.o [1]
+LedControl              0x0800025b   0x5c  Code  Gb  main.o [1]
+MemManageException      0x0800063f    0x2  Code  Gb  stm32f10x_it.o [1]
+NMIException            0x0800063b    0x2  Code  Gb  stm32f10x_it.o [1]
+PVD_IRQHandler          0x0800064f    0x2  Code  Gb  stm32f10x_it.o [1]
+PendSVC                 0x08000649    0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_APB2PeriphClockCmd  0x080005b1   0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_Configuration       0x080001b9   0x62  Code  Gb  main.o [1]
+RCC_DeInit              0x080004c9   0x30  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetFlagStatus       0x080005c3   0x22  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetSYSCLKSource     0x0800057f    0xa  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HCLKConfig          0x08000589    0xa  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HSEConfig           0x080004f9   0x34  Code  Gb  stm32f10x_rcc.o [1]
+RCC_IRQHandler          0x08000655    0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_PCLK1Config         0x08000593    0x8  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK2Config         0x080005a1    0x8  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLCmd              0x0800056b    0x6  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLConfig           0x0800055b   0x10  Code  Gb  stm32f10x_rcc.o [1]
+RCC_SYSCLKConfig        0x08000571    0xe  Code  Gb  stm32f10x_rcc.o [1]
+RCC_WaitForHSEStartUp   0x0800052d   0x2e  Code  Gb  stm32f10x_rcc.o [1]
+RTCAlarm_IRQHandler     0x0800068b    0x2  Code  Gb  stm32f10x_it.o [1]
+RTC_IRQHandler          0x08000637    0x2  Code  Gb  stm32f10x_it.o [1]
+Region$$Table$$Base     0x00000000          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000000          --   Gb  - Linker created -
+SDIO_IRQHandler         0x08000633    0x2  Code  Gb  stm32f10x_it.o [1]
+SPI1_IRQHandler         0x0800062f    0x2  Code  Gb  stm32f10x_it.o [1]
+SPI2_IRQHandler         0x08000631    0x2  Code  Gb  stm32f10x_it.o [1]
+SPI3_IRQHandler         0x0800069d    0x2  Code  Gb  stm32f10x_it.o [1]
+SVCHandler              0x08000647    0x2  Code  Gb  stm32f10x_it.o [1]
+SysTickHandler          0x0800064b    0x2  Code  Gb  stm32f10x_it.o [1]
+TAMPER_IRQHandler       0x08000651    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM1_BRK_IRQHandler     0x08000679    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM1_CC_IRQHandler      0x0800067f    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM1_TRG_COM_IRQHandler
+                        0x0800067d    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM1_UP_IRQHandler      0x0800067b    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM2_IRQHandler         0x08000625    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM3_IRQHandler         0x08000627    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM4_IRQHandler         0x08000681    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM5_IRQHandler         0x0800069b    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM6_IRQHandler         0x080006a3    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM7_IRQHandler         0x080006a5    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM8_BRK_IRQHandler     0x0800068f    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM8_CC_IRQHandler      0x08000695    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM8_TRG_COM_IRQHandler
+                        0x08000693    0x2  Code  Gb  stm32f10x_it.o [1]
+TIM8_UP_IRQHandler      0x08000691    0x2  Code  Gb  stm32f10x_it.o [1]
+UART4_IRQHandler        0x0800069f    0x2  Code  Gb  stm32f10x_it.o [1]
+UART5_IRQHandler        0x080006a1    0x2  Code  Gb  stm32f10x_it.o [1]
+USART1_IRQHandler       0x08000629    0x2  Code  Gb  stm32f10x_it.o [1]
+USART2_IRQHandler       0x0800062d    0x2  Code  Gb  stm32f10x_it.o [1]
+USART3_IRQHandler       0x0800062b    0x2  Code  Gb  stm32f10x_it.o [1]
+USBWakeUp_IRQHandler    0x0800068d    0x2  Code  Gb  stm32f10x_it.o [1]
+USB_HP_CAN_TX_IRQHandler
+                        0x0800066f    0x2  Code  Gb  stm32f10x_it.o [1]
+USB_LP_CAN_RX0_IRQHandler
+                        0x08000671    0x2  Code  Gb  stm32f10x_it.o [1]
+UsageFaultException     0x08000643    0x2  Code  Gb  stm32f10x_it.o [1]
+WWDG_IRQHandler         0x0800064d    0x2  Code  Gb  stm32f10x_it.o [1]
+__BASEPRICONFIG         0x08000717         Code  Gb  cortexm3_macro.o [1]
+__DMB                   0x080006c9         Code  Gb  cortexm3_macro.o [1]
+__DSB                   0x080006c3         Code  Gb  cortexm3_macro.o [1]
+__GetBASEPRI            0x0800071d         Code  Gb  cortexm3_macro.o [1]
+__ISB                   0x080006bd         Code  Gb  cortexm3_macro.o [1]
+__MRS_CONTROL           0x080006d3         Code  Gb  cortexm3_macro.o [1]
+__MRS_MSP               0x080006ef         Code  Gb  cortexm3_macro.o [1]
+__MRS_PSP               0x080006e3         Code  Gb  cortexm3_macro.o [1]
+__MSR_CONTROL           0x080006d9         Code  Gb  cortexm3_macro.o [1]
+__MSR_MSP               0x080006f5         Code  Gb  cortexm3_macro.o [1]
+__MSR_PSP               0x080006e9         Code  Gb  cortexm3_macro.o [1]
+__READ_FAULTMASK        0x08000711         Code  Gb  cortexm3_macro.o [1]
+__READ_PRIMASK          0x08000703         Code  Gb  cortexm3_macro.o [1]
+__RESETFAULTMASK        0x08000709         Code  Gb  cortexm3_macro.o [1]
+__RESETPRIMASK          0x080006fb         Code  Gb  cortexm3_macro.o [1]
+__REV_HalfWord          0x08000723         Code  Gb  cortexm3_macro.o [1]
+__REV_Word              0x08000727         Code  Gb  cortexm3_macro.o [1]
+__SETFAULTMASK          0x0800070d         Code  Gb  cortexm3_macro.o [1]
+__SETPRIMASK            0x080006ff         Code  Gb  cortexm3_macro.o [1]
+__SEV                   0x080006b9         Code  Gb  cortexm3_macro.o [1]
+__SVC                   0x080006cf         Code  Gb  cortexm3_macro.o [1]
+__WFE                   0x080006b5         Code  Gb  cortexm3_macro.o [1]
+__WFI                   0x080006b1         Code  Gb  cortexm3_macro.o [1]
+__cmain                 0x0800072d         Code  Gb  cmain.o [4]
+__exit                  0x0800075d   0x14  Code  Gb  exit.o [5]
+__iar_program_start     0x08000771         Code  Gb  cstartup_M.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__low_level_init        0x08000747    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000  0x130  Data  Gb  stm32f10x_vector.o [1]
+_call_main              0x08000739         Code  Gb  cmain.o [4]
+_exit                   0x08000751         Code  Gb  cexit.o [4]
+_main                   0x08000743         Code  Gb  cmain.o [4]
+delay_ms                0x08000145   0x14  Code  Gb  main.o [1]
+delay_us                0x08000131   0x14  Code  Gb  main.o [1]
+exit                    0x0800074b    0x4  Code  Gb  exit.o [3]
+main                    0x0800034d   0xa8  Code  Gb  main.o [1]
+reset                   0x0800021b   0x18  Code  Gb  main.o [1]
+special                 0x080002b7   0x8e  Code  Gb  main.o [1]
+
+
+[1] = C:\Users\DELL\Documents\CoretexSource\Source\LED_Test\EWARMv5\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1 612 bytes of readonly  code memory
+    304 bytes of readonly  data memory
+  8 192 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
